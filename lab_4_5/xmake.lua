@@ -1,0 +1,11 @@
+add_rules("mode.debug", "mode.release")
+set_languages("c++23")
+set_config("qt_sdkver", "6.11.0")
+
+target("lab_4_5")
+add_rules("qt.quickapp")
+add_frameworks("QtSql", "QtQuickControls2", "QtQuickDialogs2", "QtWidgets")
+add_files("src/*.cc")
+add_files("src/appcontroller.h", "src/models.h", "src/infowindow.h")
+add_files("src/qml.qrc")
+add_headerfiles("src/*.h")
